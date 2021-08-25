@@ -1,0 +1,25 @@
+.ui {
+  &-button {
+    align-items: center;
+    border-radius: .5rem;
+    display: inline-flex;
+    height: 2rem;
+    justify-content: center;
+    transition: all .3s;
+    width: 6rem;
+    &--white {
+      background: $white;
+      color: $dark-blue;
+      &:hover {
+        background: $white--hover;
+      }
+    }
+    &--light-blue {
+      background: $light-blue;
+      color: $dark-blue;
+      &:hover {
+        background: $light-blue--hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.website header {
+  align-items: center;
+  background: $blue;
+  color: $white;
+  display: flex;
+  height: 12.5rem;
+  justify-content: space-between;
+  padding: 0 10rem;
+  width: 100%;
+  .title {
+    font-size: 3rem;
+  }
+  .account a:first-child {
+    margin-right: 1rem;
+  }
+}

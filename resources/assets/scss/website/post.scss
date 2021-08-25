@@ -1,0 +1,51 @@
+.website main .post {
+  background: $white;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 50%;
+  &__header {
+    align-items: center;
+    border-bottom: 1px solid $white--hover;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .875rem;
+    padding-bottom: .875rem;
+    width: 100%;
+    &--profile {
+      align-items: center;
+      display: flex;
+      &-pic {
+        border-radius: 50%;
+        height: 5rem;
+        margin-right: 1rem;
+        overflow: hidden;
+        width: 5rem;
+        img {
+          object-fit: cover;
+          object-position: center;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      &-info {
+        display: flex;
+        flex-direction: column;
+        height: 2.875rem;
+        justify-content: space-between;
+        &-name {
+          color: $dark-blue;
+          font-size: 1.125rem;
+        }
+        &-datetime {
+          color: $blue--hover;
+          font-size: .875rem;
+        }
+      }
+    }
+  }
+  &__content {
+    &--text {
+      color: $blue--hover;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.website footer {
+  align-items: center;
+  background: $blue;
+  bottom: 0;
+  display: flex;
+  height: 6.25rem;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  .copyright {
+    color: $white;
+  }
+}

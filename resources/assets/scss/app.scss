@@ -1,0 +1,27 @@
+@import 'colors';
+
+@import 'website/ui';
+@import 'website/header';
+@import 'website/main';
+@import 'website/footer';
+@import 'website/post';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  body {
+    background: $pure-white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+    a {
+      text-decoration: none;
+    }
+  }
+}

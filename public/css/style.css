@@ -1,0 +1,131 @@
+.ui-button {
+  align-items: center;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  height: 2rem;
+  justify-content: center;
+  transition: all 0.3s;
+  width: 6rem;
+}
+.ui-button--white {
+  background: #F0F4EF;
+  color: #0D1821;
+}
+.ui-button--white:hover {
+  background: #c9c9c9;
+}
+.ui-button--light-blue {
+  background: #B4CDED;
+  color: #0D1821;
+}
+.ui-button--light-blue:hover {
+  background: #7393bd;
+}
+
+.website header {
+  align-items: center;
+  background: #344966;
+  color: #F0F4EF;
+  display: flex;
+  height: 12.5rem;
+  justify-content: space-between;
+  padding: 0 10rem;
+  width: 100%;
+}
+.website header .title {
+  font-size: 3rem;
+}
+.website header .account a:first-child {
+  margin-right: 1rem;
+}
+
+.website main {
+  padding: 1rem 10rem;
+  width: 100%;
+}
+
+.website footer {
+  align-items: center;
+  background: #344966;
+  bottom: 0;
+  display: flex;
+  height: 6.25rem;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+.website footer .copyright {
+  color: #F0F4EF;
+}
+
+.website main .post {
+  background: #F0F4EF;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 50%;
+}
+.website main .post__header {
+  align-items: center;
+  border-bottom: 1px solid #c9c9c9;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.875rem;
+  padding-bottom: 0.875rem;
+  width: 100%;
+}
+.website main .post__header--profile {
+  align-items: center;
+  display: flex;
+}
+.website main .post__header--profile-pic {
+  border-radius: 50%;
+  height: 5rem;
+  margin-right: 1rem;
+  overflow: hidden;
+  width: 5rem;
+}
+.website main .post__header--profile-pic img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+.website main .post__header--profile-info {
+  display: flex;
+  flex-direction: column;
+  height: 2.875rem;
+  justify-content: space-between;
+}
+.website main .post__header--profile-info-name {
+  color: #0D1821;
+  font-size: 1.125rem;
+}
+.website main .post__header--profile-info-datetime {
+  color: #223146;
+  font-size: 0.875rem;
+}
+.website main .post__content--text {
+  color: #223146;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+html body {
+  background: #FFFFFF;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+}
+html body a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
