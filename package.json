@@ -1,0 +1,27 @@
+{
+  "name": "cms-nodejs",
+  "version": "1.0.0",
+  "description": "basic cms made with nodejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndersonVanzo/CMS-NodeJS.git"
+  },
+  "author": "Anderson Vanzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndersonVanzo/CMS-NodeJS/issues"
+  },
+  "homepage": "https://github.com/AndersonVanzo/CMS-NodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "mongoose": "^6.0.0",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {}
+}
