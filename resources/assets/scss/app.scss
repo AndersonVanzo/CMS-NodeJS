@@ -20,6 +20,9 @@ html {
     min-height: 100vh;
     overflow-x: hidden;
     width: 100vw;
+    &.no-scroll {
+      overflow-y: hidden;
+    }
     a {
       text-decoration: none;
     }

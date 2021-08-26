@@ -5,7 +5,6 @@ import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { mongodbUrl } from './config/database.js';
 import { PORT } from './config/constraints.js';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 

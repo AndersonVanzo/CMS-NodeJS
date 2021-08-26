@@ -27,20 +27,99 @@
   background: #344966;
   color: #F0F4EF;
   display: flex;
-  height: 12.5rem;
+  height: 5rem;
   justify-content: space-between;
-  padding: 0 10rem;
+  padding: 0 1rem;
   width: 100%;
 }
 .website header .title {
-  font-size: 3rem;
+  font-size: 2rem;
 }
-.website header .account a:first-child {
-  margin-right: 1rem;
+.website header .menu-btn {
+  display: flex;
+  flex-direction: column;
+  height: 1.125rem;
+  justify-content: space-between;
+  position: relative;
+  width: 2.125rem;
+  z-index: 2;
+}
+.website header .menu-btn span {
+  background: #F0F4EF;
+  display: block;
+  height: 0.125rem;
+  transition: all 0.3s;
+  width: 100%;
+}
+.website header .menu-btn.active {
+  justify-content: center;
+  align-items: center;
+}
+.website header .menu-btn.active span:first-child {
+  transform: translateY(50%) rotate(45deg);
+}
+.website header .menu-btn.active span:nth-child(2) {
+  opacity: 0;
+  position: absolute;
+}
+.website header .menu-btn.active span:last-child {
+  transform: translateY(-50%) rotate(-45deg);
+}
+.website header .menu-mobile {
+  align-items: center;
+  background-color: rgba(52, 73, 102, 0.95);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: -100%;
+  position: fixed;
+  top: 0;
+  transition: all 0.3s;
+  width: 100vw;
+}
+.website header .menu-mobile a:first-child {
+  margin-bottom: 1rem;
+}
+.website header .menu-mobile.active {
+  left: 0;
+}
+.website header .account {
+  display: none;
+}
+@media (min-width: 767px) {
+  .website header {
+    padding: 0 3rem;
+  }
+  .website header .menu-btn,
+.website header .menu-mobile {
+    display: none;
+  }
+  .website header .account {
+    display: flex;
+  }
+  .website header .account a:first-child {
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1279px) {
+  .website header {
+    height: 6rem;
+    padding: 0 10rem;
+  }
+  .website header .title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1919px) {
+  .website header {
+    height: 7rem;
+    padding: 0 15rem;
+  }
 }
 
 .website main {
-  padding: 1rem 10rem;
+  padding: 1rem 1rem;
   width: 100%;
 }
 
@@ -49,9 +128,9 @@
   background: #344966;
   bottom: 0;
   display: flex;
-  height: 6.25rem;
+  font-size: 0.875rem;
   justify-content: center;
-  position: absolute;
+  padding: 1.125rem 0;
   width: 100%;
 }
 .website footer .copyright {
@@ -60,16 +139,15 @@
 
 .website main .post {
   background: #F0F4EF;
-  margin: 0 auto;
+  margin-bottom: 1rem;
   padding: 1rem;
-  width: 50%;
+  width: 100%;
 }
 .website main .post__header {
   align-items: center;
   border-bottom: 1px solid #c9c9c9;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.875rem;
   padding-bottom: 0.875rem;
   width: 100%;
 }
@@ -79,10 +157,10 @@
 }
 .website main .post__header--profile-pic {
   border-radius: 50%;
-  height: 5rem;
+  height: 3rem;
   margin-right: 1rem;
   overflow: hidden;
-  width: 5rem;
+  width: 3rem;
 }
 .website main .post__header--profile-pic img {
   object-fit: cover;
@@ -93,12 +171,12 @@
 .website main .post__header--profile-info {
   display: flex;
   flex-direction: column;
-  height: 2.875rem;
   justify-content: space-between;
 }
 .website main .post__header--profile-info-name {
   color: #0D1821;
   font-size: 1.125rem;
+  margin-bottom: 0.125rem;
 }
 .website main .post__header--profile-info-datetime {
   color: #223146;
@@ -106,6 +184,57 @@
 }
 .website main .post__content--text {
   color: #223146;
+  margin-top: 0.875rem;
+  width: 100%;
+}
+.website main .post__content--media {
+  margin-top: 0.875rem;
+  width: 100%;
+}
+.website main .post__content--media img {
+  background: #c9c9c9;
+  max-height: 15rem;
+  object-fit: contain;
+  width: 100%;
+}
+@media (min-width: 767px) {
+  .website main .post {
+    margin: 0 auto 1rem;
+    width: 80%;
+  }
+  .website main .post__content--media img {
+    max-height: 25rem;
+  }
+}
+@media (min-width: 899px) {
+  .website main .post {
+    width: 65%;
+  }
+}
+@media (min-width: 1023px) {
+  .website main .post {
+    width: 50%;
+  }
+}
+@media (min-width: 1279px) {
+  .website main .post__header--profile-pic {
+    height: 4rem;
+    width: 4rem;
+  }
+  .website main .post__header--profile-info-name {
+    margin-bottom: 0.5rem;
+  }
+  .website main .post__content--media img {
+    max-height: 30rem;
+  }
+}
+@media (min-width: 1919px) {
+  .website main .post {
+    width: 40%;
+  }
+  .website main .post__content--media img {
+    max-height: 35rem;
+  }
 }
 
 * {
@@ -123,6 +252,9 @@ html body {
   min-height: 100vh;
   overflow-x: hidden;
   width: 100vw;
+}
+html body.no-scroll {
+  overflow-y: hidden;
 }
 html body a {
   text-decoration: none;
